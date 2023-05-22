@@ -1,5 +1,7 @@
 package app.gui;
 
+import app.gui.buttons.NumberButton;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -18,6 +20,14 @@ public class CalculatorGui {
         textField.setFont(font);
         textField.setEditable(false);
         textField.setHorizontalAlignment(SwingConstants.RIGHT);
+
+        JButton[] numberButtons = new JButton[10];
+        for (int i = 0; i < 10; i++) {
+            numberButtons[i] = new NumberButton(String.valueOf(i), textField);
+            numberButtons[i].setFont(font);
+            numberButtons[i].setFocusable(false);
+        }
+
 
 
         frame.add(textField);
