@@ -38,15 +38,19 @@ public class CalculatorGui {
         JButton divideButton = new DivideButton("/", textField);
         JButton decimalButton = new DecimalButton(".", textField);
         JButton equalButton = new EqualButton("=", textField);
+        JButton clearButton = new ClearButton("Clear", textField);
+
+        clearButton.setBounds(205, 350, 145, 50);
 
 
-        JButton[] functionButtons = new JButton[6];
+        JButton[] functionButtons = new JButton[7];
         functionButtons[0] = addButton;
         functionButtons[1] = subtractButton;
         functionButtons[2] = multiplyButton;
         functionButtons[3] = divideButton;
         functionButtons[4] = decimalButton;
         functionButtons[5] = equalButton;
+        functionButtons[6] = clearButton;
 
         for (JButton button : functionButtons) {
             button.setFont(font);
@@ -70,6 +74,7 @@ public class CalculatorGui {
         panel.add(equalButton);
         panel.add(divideButton);
 
+        frame.add(clearButton);
         frame.add(panel);
         frame.add(textField);
         frame.setVisible(true);
