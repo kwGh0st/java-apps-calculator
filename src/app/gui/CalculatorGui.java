@@ -28,8 +28,22 @@ public class CalculatorGui {
             numberButtons[i].setFocusable(false);
         }
 
+        JPanel panel = new JPanel();
+        panel.setBounds(50, 100, 300, 300);
+        panel.setLayout(new GridLayout(5, 4, 5, 5));
 
+        panel.add(numberButtons[1]);
+        panel.add(numberButtons[2]);
+        panel.add(numberButtons[3]);
+        panel.add(numberButtons[4]);
+        panel.add(numberButtons[5]);
+        panel.add(numberButtons[6]);
+        panel.add(numberButtons[7]);
+        panel.add(numberButtons[8]);
+        panel.add(numberButtons[9]);
+        panel.add(numberButtons[0]);
 
+        frame.add(panel);
         frame.add(textField);
         frame.setVisible(true);
     }
