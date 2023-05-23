@@ -1,6 +1,6 @@
 package app.gui;
 
-import app.gui.buttons.NumberButton;
+import app.gui.buttons.*;
 
 import javax.swing.*;
 import java.awt.*;
