@@ -32,16 +32,43 @@ public class CalculatorGui {
         panel.setBounds(50, 100, 300, 300);
         panel.setLayout(new GridLayout(5, 4, 5, 5));
 
+        JButton addButton = new AddButton("+", textField);
+        JButton subtractButton = new SubtractButton("-", textField);
+        JButton multiplyButton = new MultiplyButton("*", textField);
+        JButton divideButton = new DivideButton("/", textField);
+        JButton decimalButton = new DecimalButton(".", textField);
+        JButton equalButton = new EqualButton("=", textField);
+
+
+        JButton[] functionButtons = new JButton[6];
+        functionButtons[0] = addButton;
+        functionButtons[1] = subtractButton;
+        functionButtons[2] = multiplyButton;
+        functionButtons[3] = divideButton;
+        functionButtons[4] = decimalButton;
+        functionButtons[5] = equalButton;
+
+        for (JButton button : functionButtons) {
+            button.setFont(font);
+            button.setFocusable(false);
+        }
+
         panel.add(numberButtons[1]);
         panel.add(numberButtons[2]);
         panel.add(numberButtons[3]);
+        panel.add(addButton);
         panel.add(numberButtons[4]);
         panel.add(numberButtons[5]);
         panel.add(numberButtons[6]);
+        panel.add(subtractButton);
         panel.add(numberButtons[7]);
         panel.add(numberButtons[8]);
         panel.add(numberButtons[9]);
+        panel.add(multiplyButton);
+        panel.add(decimalButton);
         panel.add(numberButtons[0]);
+        panel.add(equalButton);
+        panel.add(divideButton);
 
         frame.add(panel);
         frame.add(textField);
