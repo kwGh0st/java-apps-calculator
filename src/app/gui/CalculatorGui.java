@@ -40,12 +40,13 @@ public class CalculatorGui {
         JButton equalButton = new EqualButton("=", textField);
         JButton clearButton = new ClearButton("Clear", textField);
         JButton deleteButton = new DeleteButton("Delete", textField);
+        JButton negativeButton = new NegativeButton("(-)", textField);
 
-        deleteButton.setBounds(50, 350, 145, 50);
-        clearButton.setBounds(205, 350, 145, 50);
+        deleteButton.setBounds(50, 450, 145, 50);
+        clearButton.setBounds(205, 450, 145, 50);
 
 
-        JButton[] functionButtons = new JButton[8];
+        JButton[] functionButtons = new JButton[9];
         functionButtons[0] = addButton;
         functionButtons[1] = subtractButton;
         functionButtons[2] = multiplyButton;
@@ -54,6 +55,7 @@ public class CalculatorGui {
         functionButtons[5] = equalButton;
         functionButtons[6] = clearButton;
         functionButtons[7] = deleteButton;
+        functionButtons[8] = negativeButton;
 
         for (JButton button : functionButtons) {
             button.setFont(font);
@@ -76,6 +78,7 @@ public class CalculatorGui {
         panel.add(numberButtons[0]);
         panel.add(equalButton);
         panel.add(divideButton);
+        panel.add(negativeButton);
 
         frame.add(deleteButton);
         frame.add(clearButton);
